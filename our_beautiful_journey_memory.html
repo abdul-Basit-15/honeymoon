@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Our Beautiful Journey ❤️</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        font-family: Georgia, serif;
+        background: #0d1015;
+        color: #fff;
+      }
+      .p {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.03);
+        transition: 0.8s;
+      }
+      .p.on {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+      }
+      .p1 .bg {
+        background-image:
+          linear-gradient(120deg, #35101fcc, #07151d77),
+          url("images/IMG_1947.jpg");
+      }
+      .p2 .bg {
+        background-image:
+          linear-gradient(120deg, #092b35bb, #10152366),
+          url("images/IMG_1846.jpg");
+      }
+      .p3 .bg {
+        background-image:
+          linear-gradient(120deg, #061b24aa, #050b12aa),
+          url("images/IMG_3313.jpg");
+      }
+      .p4 .bg {
+        background-image:
+          linear-gradient(120deg, #3a102dcc, #081d2688),
+          url("images/IMG_2255.jpg");
+      }
+      .p5 .bg {
+        background-image:
+          linear-gradient(120deg, #260d20dd, #09222acc),
+          url("images/IMG_3067.jpg");
+      }
+      .c {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: min(850px, 90vw);
+        padding: 28px;
+      }
+      .ey {
+        font-size: 12px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        opacity: 0.75;
+        margin-bottom: 18px;
+      }
+      .heart {
+        font-size: 34px;
+      }
+      .c h1,
+      .c h2 {
+        font-weight: 400;
+        line-height: 1.1;
+        margin: 18px 0 22px;
+      }
+      .c h1 {
+        font-size: clamp(46px, 8vw, 82px);
+        font-style: italic;
+      }
+      .c h2 {
+        font-size: clamp(36px, 6vw, 65px);
+      }
+      p {
+        font-size: clamp(18px, 2.2vw, 25px);
+        line-height: 1.65;
+        margin: 0 auto;
+      }
+      .pink {
+        color: #ffd4de;
+        font-style: italic;
+      }
+      .line {
+        width: 75px;
+        height: 1px;
+        background: #fff9;
+        margin: 24px auto;
+      }
+      .btn {
+        margin-top: 30px;
+        padding: 14px 32px;
+        border-radius: 999px;
+        border: 1px solid #fff5;
+        background: #ffffff18;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 13px;
+        margin: 25px auto;
+        max-width: 800px;
+      }
+      .pic {
+        height: 185px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #fff5;
+      }
+      .a {
+        background-image: url("images/US1.jpg");
+      }
+      .b {
+        background-image: url("images/US3.jpg");
+      }
+      .d {
+        background-image: url("images/US2.jpg");
+      }
+      .card {
+        padding: 42px 25px;
+        border-radius: 30px;
+        background: #100b1290;
+        border: 1px solid #fff4;
+        backdrop-filter: blur(10px);
+      }
+      .small {
+        margin-top: 25px;
+        opacity: 0.8;
+      }
+      .dots {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+        display: flex;
+        gap: 7px;
+      }
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff5;
+      }
+      .dot.on {
+        width: 24px;
+        background: #fff;
+        border-radius: 8px;
+      }
+      .float {
+        position: fixed;
+        bottom: -30px;
+        animation: r 5s linear forwards;
+        z-index: 30;
+      }
+      @keyframes r {
+        to {
+          transform: translateY(-110vh) rotate(25deg);
+          opacity: 0;
+        }
+      }
+      @media (max-width: 650px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .pic {
+          height: 135px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="p p1 on" id="p1">
+      <div class="bg"></div>
+      <div class="c">
+        <div class="heart">❤️</div>
+        <div class="ey">For the love of my life</div>
+        <h1>Some journeys...</h1>
+        <div class="line"></div>
+        <p>
+          ...are beautiful because of the places,<br />and some because of
+          <span class="pink">the person beside you.</span><br /><br />For me, it
+          has always been you. ❤️
+        </p>
+        <button class="btn" onclick="go(2)">Continue →</button>
+      </div>
+    </section>
+    <section class="p p2" id="p2">
+      <div class="bg"></div>
+      <div class="c">
+        <div class="ey">Our little story</div>
+        <h2>Humne kuch khoobsurat jagahen dekhin...</h2>
+        <div class="line"></div>
+        <p>
+          Lekin meri favourite memory woh thi<br />jahan
+          <span class="pink">tum mere saath thi. 🥰</span>
+        </p>
+        <button class="btn" onclick="go(3)">Remember? →</button>
+      </div>
+    </section>
+    <section class="p p3" id="p3">
+      <div class="bg"></div>
+      <div class="c">
+        <div class="ey">A few beautiful memories</div>
+        <h2>Skardu × Hunza 🏔️</h2>
+        <div class="grid">
+          <div class="pic a"></div>
+          <div class="pic b"></div>
+          <div class="pic d"></div>
+        </div>
+        <p>
+          The places were beautiful...<br /><span class="pink"
+            >but you made them unforgettable. ❤️</span
+          >
+        </p>
+        <button class="btn" onclick="go(4)">One more thing →</button>
+      </div>
+    </section>
+    <section class="p p4" id="p4">
+      <div class="bg"></div>
+      <div class="c">
+        <div class="ey">Looking back</div>
+        <h2>Pahaar, lakes, roads...</h2>
+        <div class="line"></div>
+        <p>
+          Sab apni jagah khoobsurat thay.<br /><br />Lekin tumhare saath hone
+          ne<br /><span class="pink">is safar ko yaadgaar bana diya. ❤️</span>
+        </p>
+        <button class="btn" onclick="go(5)">And now... →</button>
+      </div>
+    </section>
+    <section class="p p5" id="p5">
+      <div class="bg"></div>
+      <div class="c card">
+        <div class="heart">💕</div>
+        <div class="ey">Just for you</div>
+        <h2>
+          Thank You For<br /><span class="pink">Being My Everything</span>
+        </h2>
+        <div class="line"></div>
+        <p>
+          For every smile, every memory,<br />and every little moment we
+          share...<br /><br /><span class="pink"
+            >I'd choose you in every journey,<br />every time. ❤️</span
+          >
+        </p>
+        <div class="small">
+          Forever yours,<br /><strong>Your Husband ❤️</strong>
+        </div>
+        <button class="btn" onclick="celebrate()">❤️ I Love You</button>
+      </div>
+    </section>
+    <div class="dots">
+      <i class="dot on"></i><i class="dot"></i><i class="dot"></i
+      ><i class="dot"></i><i class="dot"></i>
+    </div>
+    <script>
+      let n = 1;
+      const ds = document.querySelectorAll(".dot");
+      function go(x) {
+        document.getElementById("p" + n).classList.remove("on");
+        n = x;
+        document.getElementById("p" + n).classList.add("on");
+        ds.forEach((d, i) => d.classList.toggle("on", i === n - 1));
+      }
+      function celebrate() {
+        for (let i = 0; i < 35; i++) {
+          let h = document.createElement("div");
+          h.className = "float";
+          h.textContent = ["❤️", "💕", "💖", "✨"][
+            Math.floor(Math.random() * 4)
+          ];
+          h.style.left = Math.random() * 100 + "%";
+          h.style.fontSize = 16 + Math.random() * 22 + "px";
+          h.style.animationDuration = 3 + Math.random() * 4 + "s";
+          document.body.appendChild(h);
+          setTimeout(() => h.remove(), 7500);
+        }
+      }
+    </script>
+  </body>
+</html>
